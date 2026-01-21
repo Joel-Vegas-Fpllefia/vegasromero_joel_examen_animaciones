@@ -1,0 +1,219 @@
+body {
+  background-color: rgb(167, 77, 167);
+  padding-bottom: 0;
+}
+main {
+  margin: 0 auto;
+  background-color: white;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.contenedor_act1 {
+  width: fit-content;
+  height: 800px;
+  display: flex;
+  gap: 150px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.content1 {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  box-shadow: 0.4px 0.4px 0.4px rgb(137, 137, 137);
+  transition:
+    scale 400ms ease-out,
+    margin-top 400ms ease-out,
+    background-color 300ms ease-in-out,
+    box-shadow 300ms ease;
+  border: 1px solid rgb(137, 137, 137);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.img1 {
+  width: 100%;
+  overflow: hidden;
+  height: 50%;
+}
+
+.img1 > img {
+  height: 200px;
+  width: 100%;
+}
+
+.content1:hover {
+  scale: calc(1.2);
+  margin-top: -10px;
+  background-color: rgb(227, 227, 227);
+  box-shadow: 2px 2px 2px rgb(162, 162, 162);
+}
+.text1 {
+  height: 200px;
+  padding-left: 5px;
+}
+.text1 > h2 {
+  font-size: 18px;
+}
+.text1 > p {
+  font-size: 12px;
+  padding-left: 5px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+}
+/* act 2 */
+.exercici_2 {
+  width: fit-content;
+  display: flex;
+  gap: 50px;
+  height: 80px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+}
+button {
+  border: 1px solid transparent;
+  width: 150px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.act_transicion {
+  background-color: #3498db;
+  transition: all 200ms ease-in;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+.act_transicion:hover {
+  background-color: #2980b9;
+}
+
+.act_rotacion {
+  background-color: red;
+  color: white;
+  transition: all 600ms ease-in-out;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.act_rotacion:active {
+  transform: rotate(360deg);
+}
+
+.act_escala {
+  background-color: greenyellow;
+  color: black;
+  transition: all 200ms;
+  padding: 10px;
+  font-weight: bold;
+}
+.act_escala:hover {
+  scale: calc(1.2);
+}
+
+.act_escala:active {
+  scale: calc(0.95);
+}
+
+.act_combi {
+  background-color: purple;
+  color: white;
+  transition: all 300ms;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.act_combi:hover {
+  scale: calc(1.1);
+  transform: rotate(5deg);
+  background-color: indigo;
+}
+/*  Exercici 3: Animació amb @keyframes (25 punts)*/
+.pelota_rosa {
+  background-color: pink;
+  border-radius: 90%;
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  animation: pulsacio 1.5s infinite ease-in-out;
+}
+
+@keyframes pulsacio {
+  0% {
+    scale: calc(1);
+  }
+  50% {
+    scale: calc(1.2);
+  }
+  100% {
+    scale: calc(1);
+  }
+}
+/* Exercici 4: Menú amb Transicions (15 punts)  */
+nav {
+  width: 800px;
+  margin: 0 auto;
+}
+nav > ul {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li {
+  width: 100px;
+  list-style: none;
+  overflow: hidden;
+  color: purple;
+  transition: color 250ms ease-out;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.linea_header {
+  display: flex;
+}
+.cargado {
+  width: 100px;
+  height: 2px;
+  background-color: purple;
+  margin-left: -100px;
+  transition:
+    margin-left 250ms ease-out,
+    width 250ms ease-out;
+}
+
+.sin_cargar {
+  width: 100px;
+  height: 2px;
+  background-color: transparent;
+}
+li:hover .cargado {
+  color: blue;
+  margin-left: 0px;
+  width: 150px;
+}
+
+/*  Exercici 5: Loading Spinner (15 punts) */
+.load {
+  border: 4px solid;
+  border-top-color: #3498db;
+  border-bottom-color: beige;
+  border-left-color: beige;
+  border-right-color: beige;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: cercle 1s infinite linear;
+  margin: 0 auto;
+}
+
+@keyframes cercle {
+  to {
+    transform: rotate(360deg);
+  }
+}
